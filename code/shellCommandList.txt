@@ -1,0 +1,17 @@
+piping and file redirection
+
+exit -- shell DONE!
+ls - fileManager DONE!
+mkdir - filemanager DONE!
+touch - filemanager -- DONE!
+cd - shell (shell needs to keep track of where you are at all times) DONE!
+rm - filemanager (not yet)
+rmdir - filemanager (not yet)
+echo - shell DONE!
+cat - filemanager -- read
+cp - filemanager && shell
+mv - filemanager (not yet)
+history -- shell DONE!
+kill -- cpu
+pwd - Shell DONE!
+

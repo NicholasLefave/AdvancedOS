@@ -1,0 +1,4 @@
+bison -v -t  $1.y    
+flex  $1.l 
+gcc -g lex.yy.c $1.tab.c -lfl -lm -o $1  
+

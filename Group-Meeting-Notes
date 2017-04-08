@@ -1,0 +1,7 @@
+APRIL 18th
+* Decided to keep B-Tree structure because it makes updating inode locations easier when we defrag and acessing them, and concurrent access. 
+* Decided that boot should create the shared memory and then fork the other processes. Esentially, boot will be IPC. 
+
+April 23rd
+* The user types in a command into the shell. Then the shell pases that command into shared memory and then CPU.c reads that shared memory and finds the correspoiding executable. Example the user types "ls" and then the cpu finds the "ls" executable and passes the extra flags like "-la". Then the lsexecutable will preform it's function and pass back it's output to shared memory at which point the shell will display that output. 
+ 

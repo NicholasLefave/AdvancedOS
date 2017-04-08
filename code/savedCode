@@ -1,0 +1,19 @@
+
+case CREAD:
+					size = seek(strtoumax(data, NULL, 10), 0, SEEKEND) - seek(strtoumax(data, NULL, 10), 0, SEEKSET);
+					char *tester = (char *)calloc(size+1, sizeof(char));
+					read(strtoumax(data, NULL, 10), tester, size);
+					printf("\n%s", tester);
+					free(tester);
+					/*read(strtoumax(data, NULL, 10), data, (size < getSharedDataSize()) ? size : getSharedDataSize());
+					while(size >= getSharedDataSize())
+					{
+						size = size - getSharedDataSize();
+						seek(strtoumax(data, NULL, 10), getSharedDataSize(), SEEKSET);
+						setSharedMemoryCommand(CMOREDATA);
+						setSharedMemoryTo(from);
+						while(!canIAccessSharedMemory(FILEMANAGER) && getSharedMemoryCommand() != CCONTINUE);
+						read(strtoumax(data, NULL, 10), data, (size < getSharedDataSize()) ? size : getSharedDataSize());
+					}
+					setSharedMemoryCommand(CDATA);*/
+					break;
